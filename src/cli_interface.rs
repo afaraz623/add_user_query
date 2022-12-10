@@ -1,22 +1,9 @@
-/* 
- *  > Add Employee Name To A Department?
- *      Format: "Add Sally to Engineering"
- *      :- {INPUT}
- *    Query
- *      > Search By Department? 
- *          :- {INPUT}
- *        Search By Employee Name?
- *          :- {INPUT}
- *        Back
- *    Exit 
- */
-
 use dialoguer::{theme::ColorfulTheme, Select, Input, console::Style};
 
 /*
  * menu_selections and user_inputs are only 
  * here to wrap the dialoguer libray to increase
- * code readibity and help with code repetition. 
+ * code readibity and help minimize code repetition. 
  */
 fn menu_selections(theme: &ColorfulTheme, menu_items: &Vec<&str>, prompt_msg: &String) -> usize
 {
@@ -137,6 +124,17 @@ fn query_emply_cli(theme: &ColorfulTheme)
 /*
  * This function is called to start the
  * cli interface.
+ *
+ *  > Add Employee Name To A Department?
+ *      Format: "Add Sally to Engineering"
+ *      :- {INPUT}
+ *    Query
+ *      > Search By Department? 
+ *          :- {INPUT}
+ *        Search By Employee Name?
+ *          :- {INPUT}
+ *        Back
+ *    Exit 
  */
 pub fn cli_interface() 
 {
