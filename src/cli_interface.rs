@@ -15,8 +15,8 @@ use dialoguer::{theme::ColorfulTheme, Select, Input, console::Style};
 
 /*
  * menu_selections and user_inputs are only 
- * here to wrap the dialoguer libray code 
- * and help this code repetition.
+ * here to wrap the dialoguer libray to increase
+ * code readibity and help with code repetition. 
  */
 fn menu_selections(theme: &ColorfulTheme, menu_items: &Vec<&str>, prompt_msg: &String) -> usize
 {
@@ -61,8 +61,8 @@ fn init_menu_cli(theme: &ColorfulTheme) -> usize
 
 /*
  * Sub-menu function which is the result
- * of "Add Employee Name To A Department?".
- * Returns user entry
+ * of "Add Employee Name To A Department?"
+ * and returns user entry
  */  
 fn add_data_cli(theme: &ColorfulTheme)
 {
@@ -102,6 +102,11 @@ fn query_data_cli(theme: &ColorfulTheme)
         }
 }
 
+/*
+ * This function is one level below the
+ * "By Department?" sub-menu and it returns
+ * user entry  
+ */
 fn query_depart_cli(theme: &ColorfulTheme) 
 {
         let query_depart_msg = String::from("Enter department name to see which employees are in it\n:-");
@@ -113,6 +118,11 @@ fn query_depart_cli(theme: &ColorfulTheme)
         }
 }
 
+/*
+ * This function is one level below the
+ * "By Name?" sub-menu and it returns
+ * user entry  
+ */
 fn query_emply_cli(theme: &ColorfulTheme) 
 {
         let query_emply_msg = String::from("Enter employee name to see which department they work in\n:-");
@@ -124,6 +134,10 @@ fn query_emply_cli(theme: &ColorfulTheme)
         }
 }
 
+/*
+ * This function is called to start the
+ * cli interface.
+ */
 pub fn cli_interface() 
 {
         let theme = ColorfulTheme {
